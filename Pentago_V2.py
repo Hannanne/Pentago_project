@@ -1497,6 +1497,7 @@ def main_q_learning():
             action = agent.choose_action(state, possible_moves)
             pentago_board = apply_move(pentago_board, action, current_player)
             draw_board(pentago_board)
+            update_board_display(pentago_board)
             pygame.display.flip()
 
             if check_winner(pentago_board, current_player):
